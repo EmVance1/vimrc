@@ -28,14 +28,6 @@ require'nvim-treesitter.configs'.setup {
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- function FoldText()
---     local line = vim.fn.getline(vim.v.foldstart)
---     local count = vim.v.foldend - vim.v.foldstart
---     local fill = string.rep('.', vim.fn.winwidth('%') - #(line) - 50)
---     return line .. '  ' .. fill .. ' (' .. count .. ' L)'
--- end
--- vim.opt.foldtext = 'v:lua.FoldText()'
--- vim.cmd([[set fillchars=fold:\ ]])
 
 local M = {}
 -- function to create a list of commands and convert them to autocommands
