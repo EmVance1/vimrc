@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\18hide_dotfiles\1\20hide_gitignored\1\16hide_hidden\1\fvisible\2\vwindow\20mapping_options\1\0\2\fnoremap\2\vnowait\2\1\0\2\nwidth\3\30\rposition\tleft$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\26sort_case_insensitive\2\25close_if_last_window\2\23popup_border_style\frounded\23enable_diagnostics\2\22enable_git_status\2\nsetup\rneo-tree\frequire\0" },
+    config = { "\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\16hide_hidden\1\fvisible\2\18hide_dotfiles\1\20hide_gitignored\1\vwindow\20mapping_options\1\0\2\fnoremap\2\vnowait\2\1\0\2\nwidth\3\30\rposition\tleft$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\25close_if_last_window\2\23popup_border_style\frounded\23enable_diagnostics\2\22enable_git_status\2\26sort_case_insensitive\2\nsetup\rneo-tree\frequire\0" },
     loaded = true,
     path = "C:\\Users\\ayv20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -161,6 +161,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\ayv20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\pretty-fold.nvim",
     url = "https://github.com/anuvyklack/pretty-fold.nvim"
   },
+  ["tabline.nvim"] = {
+    config = { "\27LJ\2\nD\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\venable\1\nsetup\ftabline\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\ayv20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tabline.nvim",
+    url = "https://github.com/kdheepak/tabline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\ayv20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
@@ -171,8 +177,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\18hide_dotfiles\1\20hide_gitignored\1\16hide_hidden\1\fvisible\2\vwindow\20mapping_options\1\0\2\fnoremap\2\vnowait\2\1\0\2\nwidth\3\30\rposition\tleft$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\26sort_case_insensitive\2\25close_if_last_window\2\23popup_border_style\frounded\23enable_diagnostics\2\22enable_git_status\2\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
+try_loadstring("\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\16hide_hidden\1\fvisible\2\18hide_dotfiles\1\20hide_gitignored\1\vwindow\20mapping_options\1\0\2\fnoremap\2\vnowait\2\1\0\2\nwidth\3\30\rposition\tleft$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\25close_if_last_window\2\23popup_border_style\frounded\23enable_diagnostics\2\22enable_git_status\2\26sort_case_insensitive\2\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
+-- Config for: tabline.nvim
+time([[Config for tabline.nvim]], true)
+try_loadstring("\27LJ\2\nD\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\venable\1\nsetup\ftabline\frequire\0", "config", "tabline.nvim")
+time([[Config for tabline.nvim]], false)
 -- Config for: pretty-fold.nvim
 time([[Config for pretty-fold.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16pretty-fold\frequire\0", "config", "pretty-fold.nvim")
