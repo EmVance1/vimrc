@@ -13,7 +13,7 @@ This is my own personal NeoVim config (WIP) - Inspired by [ThePrimeagen](https:/
 ### LSP
 - [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim)
 
-- languages: C/C++, Rust, Python, Lua, Assembly
+- languages: C/C++, Rust, Python, JS/TS, Lua, Assembly
 
 ### File Management
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
@@ -22,5 +22,6 @@ This is my own personal NeoVim config (WIP) - Inspired by [ThePrimeagen](https:/
 
 ### Convenience
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [tabline](https://github.com/kdheepak/tabline.nvim)
 - [pretty-fold](https://github.com/anuvyklack/pretty-fold.nvim)
 

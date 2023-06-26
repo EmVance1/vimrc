@@ -2,11 +2,15 @@ local vim = vim
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.textwidth = 0
 vim.opt.tabstop = 4
-vim.opt.mouse = a
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+vim.opt.termguicolors = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
 
 vim.api.nvim_create_user_command('Script', '!scripts -i %:t -o %:r.pdf', { nargs = 0 })
 vim.api.nvim_create_user_command('Scene', '!scripts -i %:t -o %:r-<args>.pdf -s <args>', { nargs = 1 })
@@ -16,9 +20,6 @@ vim.api.nvim_create_user_command('SceneNum', '1,.s/\\v(INT\\.|EXT\\.) [^a-z]+ - 
 vim.api.nvim_create_user_command('Pymain', '!python main.py <args>', { nargs = "*" })
 vim.api.nvim_create_user_command('Python', '!python %:t <args>', { nargs = "*" })
 vim.api.nvim_create_user_command('Mypy',   '!python -m mypy %:t', { nargs = 0 })
-
-vim.api.nvim_create_user_command('Gcc',   '!gcc -o %:r.exe %:t|\"%:r.exe\"', { nargs = 0 })
-
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.txt",
@@ -38,9 +39,17 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.c",
+    pattern = "*.py",
     callback = function(args)
-		vim.keymap.set('n', '<C-c>', ':Gcc<Enter>')
+		vim.keymap.set('n', '<C-r>', ':Python<Enter>')
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.rs",
+    callback = function(args)
+		vim.keymap.set('n', '<C-b>', ':!cargo build<Enter>')
+		vim.keymap.set('n', '<C-r>', ':!cargo run<Enter>')
     end
 })
 
