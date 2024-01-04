@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
+local package_path_str = "C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\share\\lua\\5.1\\?.lua;C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
+local install_cpath_pattern = "C:\\Users\\ayv20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\lua\\5.1\\?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -120,7 +120,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\20hide_gitignored\1\16hide_hidden\1\fvisible\2\18hide_dotfiles\2\vwindow\20mapping_options\1\0\2\fnoremap\2\vnowait\2\1\0\2\rposition\tleft\nwidth\3\30$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\23popup_border_style\frounded\25close_if_last_window\2\26sort_case_insensitive\2\22enable_git_status\2\23enable_diagnostics\2\nsetup\rneo-tree\frequire\0" },
+    config = { "\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\fvisible\2\16hide_hidden\1\20hide_gitignored\1\18hide_dotfiles\2\vwindow\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\2\nwidth\3\30\rposition\tleft$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\23enable_diagnostics\2\22enable_git_status\2\26sort_case_insensitive\2\23popup_border_style\frounded\25close_if_last_window\2\nsetup\rneo-tree\frequire\0" },
     loaded = true,
     path = "C:\\Users\\ayv20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -182,7 +182,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\20hide_gitignored\1\16hide_hidden\1\fvisible\2\18hide_dotfiles\2\vwindow\20mapping_options\1\0\2\fnoremap\2\vnowait\2\1\0\2\rposition\tleft\nwidth\3\30$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\23popup_border_style\frounded\25close_if_last_window\2\26sort_case_insensitive\2\22enable_git_status\2\23enable_diagnostics\2\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
+try_loadstring("\27LJ\2\n¦\3\0\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\1K\0\1\0\15filesystem\19filtered_items\1\0\0\1\0\4\fvisible\2\16hide_hidden\1\20hide_gitignored\1\18hide_dotfiles\2\vwindow\20mapping_options\1\0\2\vnowait\2\fnoremap\2\1\0\2\nwidth\3\30\rposition\tleft$open_files_do_not_replace_types\1\4\0\0\rterminal\ftrouble\aqf\1\0\5\23enable_diagnostics\2\22enable_git_status\2\26sort_case_insensitive\2\23popup_border_style\frounded\25close_if_last_window\2\nsetup\rneo-tree\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
 -- Config for: pretty-fold.nvim
 time([[Config for pretty-fold.nvim]], true)

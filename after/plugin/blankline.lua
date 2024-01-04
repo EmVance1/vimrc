@@ -1,6 +1,11 @@
 vim.opt.list = true
 
-require("indent_blankline").setup {
-
-}
+require("ibl").setup({
+    scope = {
+        enabled = false
+    },
+    indent = {
+        char = "▏"
+    }
+})
 
