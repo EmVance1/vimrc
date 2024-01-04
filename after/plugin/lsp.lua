@@ -9,7 +9,8 @@ lsp.ensure_installed({
 	'lua_ls',
 	'asm_lsp',
     'eslint',
-    'tsserver'
+    'tsserver',
+    -- 'ocamllsp'
 })
 
 lsp.on_attach(function(client, bufnr)

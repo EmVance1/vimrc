@@ -53,3 +53,9 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     end
 })
 
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.cco",
+    callback = function(args)
+        vim.cmd("set syntax=cco")
+    end
+})
