@@ -7,6 +7,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.opt.conceallevel = 1
 
 vim.opt.termguicolors = true
 vim.opt.wrap = false
@@ -24,32 +25,32 @@ vim.api.nvim_create_user_command('Mypy',   '!python -m mypy %:t', { nargs = 0 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.txt",
     callback = function(args)
-		local content = vim.api.nvim_buf_get_lines(args.buf, 0, -1, false)
-		if content[3] == "* [nvim: sc] *" then
-				vim.keymap.set('n', '<leader>sc', ':SceneCount<Enter>', { buffer = args.buf })
-				vim.keymap.set('n', '<leader>sn', ':SceneNum<Enter>', { buffer = args.buf })
-				vim.keymap.set('n', '<C-e>', ':Script<Enter>', { buffer = args.buf })
-				vim.keymap.set('n', '<C-s>', ':Scene ', { buffer = args.buf })
-				vim.keymap.set('n', '<leader>t', '/TODO<Enter>', { buffer = args.buf })
-				vim.cmd("set syntax=sc")
-		end
+        local content = vim.api.nvim_buf_get_lines(args.buf, 0, -1, false)
+        if content[3] == "* [nvim: sc] *" then
+            vim.keymap.set('n', '<leader>sc', ':SceneCount<cr>', { buffer = args.buf })
+            vim.keymap.set('n', '<leader>sn', ':SceneNum<cr>', { buffer = args.buf })
+            vim.keymap.set('n', '<C-e>', ':Script<cr>', { buffer = args.buf })
+            vim.keymap.set('n', '<C-s>', ':Scene ', { buffer = args.buf })
+            vim.keymap.set('n', '<leader>t', '/TODO<cr>', { buffer = args.buf })
+            vim.cmd("set syntax=sc")
+        end
 
-		vim.keymap.set('n', '<leader>lk', '/\\[[^\\]]*\\]<Enter>')
+        vim.keymap.set('n', '<leader>lk', '/\\[[^\\]]*\\]<cr>')
     end
 })
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.py",
     callback = function(args)
-		vim.keymap.set('n', '<C-r>', ':Python<Enter>')
+        vim.keymap.set('n', '<C-r>', ':Python<cr>')
     end
 })
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.rs",
     callback = function(args)
-		vim.keymap.set('n', '<C-b>', ':!cargo build<Enter>')
-		vim.keymap.set('n', '<C-r>', ':!cargo run<Enter>')
+        vim.keymap.set('n', '<C-b>', ':!cargo build<cr>')
+        vim.keymap.set('n', '<C-r>', ':!cargo run<cr>')
     end
 })
 
@@ -59,3 +60,4 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
         vim.cmd("set syntax=cco")
     end
 })
+
