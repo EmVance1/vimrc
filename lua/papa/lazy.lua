@@ -15,7 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 
 return require('lazy').setup({
     { 'catppuccin/nvim', name = 'catppuccin' },
-    -- { 'xiyaowong/transparent.nvim' },
+
+    { 'xiyaowong/transparent.nvim' },
 
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-tree/nvim-web-devicons' },
