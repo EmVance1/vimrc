@@ -12,6 +12,8 @@ vim.opt.conceallevel = 1
 vim.opt.termguicolors = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
+vim.opt.updatetime = 50
+vim.opt.colorcolumn = "135"
 
 vim.api.nvim_create_user_command('Script', '!scripts -i %:t -o %:r.pdf', { nargs = 0 })
 vim.api.nvim_create_user_command('Scene', '!scripts -i %:t -o %:r-<args>.pdf -s <args>', { nargs = 1 })
