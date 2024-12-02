@@ -42,11 +42,5 @@ return require('lazy').setup({
     { 'nvim-lualine/lualine.nvim' },
     { 'kdheepak/tabline.nvim' },
     { 'lukas-reineke/indent-blankline.nvim' },
-    {
-        'anuvyklack/pretty-fold.nvim',
-        config = function()
-           require('pretty-fold').setup()
-        end
-    },
 })
 
