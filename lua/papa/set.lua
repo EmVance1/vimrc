@@ -21,10 +21,6 @@ vim.api.nvim_create_user_command('Scene', '!scripts -i %:t -o %:r-<args>.pdf -s 
 vim.api.nvim_create_user_command('SceneCount', '%s/\\v(INT\\.|EXT\\.) [^a-z]+ - [^a-z]+//gn', { nargs = 0 })
 vim.api.nvim_create_user_command('SceneNum', '1,.s/\\v(INT\\.|EXT\\.) [^a-z]+ - [^a-z]+//gn', { nargs = 0 })
 
-vim.api.nvim_create_user_command('Pymain', '!python main.py <args>', { nargs = "*" })
-vim.api.nvim_create_user_command('Python', '!python %:t <args>', { nargs = "*" })
-vim.api.nvim_create_user_command('Mypy',   '!python -m mypy %:t', { nargs = 0 })
-
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.txt",
     callback = function(args)
@@ -39,21 +35,8 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
         end
 
         vim.keymap.set('n', '<leader>lk', '/\\[[^\\]]*\\]<cr>')
-    end
-})
-
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.py",
-    callback = function(args)
-        vim.keymap.set('n', '<C-r>', ':Python<cr>')
-    end
-})
-
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.rs",
-    callback = function(args)
-        vim.keymap.set('n', '<C-b>', ':!cargo build<cr>')
-        vim.keymap.set('n', '<C-r>', ':!cargo run<cr>')
+        vim.opt.wrap = true
+        vim.opt.textwidth = 135
     end
 })
 
