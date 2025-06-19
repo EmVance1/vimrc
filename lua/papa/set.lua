@@ -14,7 +14,13 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "135"
+vim.opt.fillchars = {eob = " "}
+vim.opt.signcolumn = "yes"
+vim.opt.foldenable = false
 vim.cmd("set foldtext=")
+vim.diagnostic.config({ virtual_text = true })
+
+vim.g.zig_fmt_autosave = 0
 
 vim.api.nvim_create_user_command('Script', '!scripts -i %:t -o %:r.pdf', { nargs = 0 })
 vim.api.nvim_create_user_command('Scene', '!scripts -i %:t -o %:r-<args>.pdf -s <args>', { nargs = 1 })
@@ -44,6 +50,20 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.cco",
     callback = function(args)
         vim.cmd("set syntax=cco")
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.shmy",
+    callback = function(args)
+        vim.cmd("set syntax=shmy")
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.md",
+    callback = function(args)
+        vim.cmd("set wrap")
     end
 })
 

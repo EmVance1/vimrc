@@ -38,3 +38,15 @@ vim.keymap.set('n', 'gT', ':bp<cr>')
 vim.keymap.set('n', '<leader>gt', ':tabn<cr>')
 vim.keymap.set('n', '<leader>gT', ':tabp<cr>')
 
+
+local opts = { remap = false }
+
+vim.keymap.set("n", "K",  function() vim.lsp.buf.hover({ border = 'rounded' }) end, opts)
+vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end, opts)
+vim.keymap.set("n", "[g", function() vim.diagnostic.goto_end() end, opts)
+vim.keymap.set("n", "]g", function() vim.diagnostic.goto_end() end, opts)
+vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+

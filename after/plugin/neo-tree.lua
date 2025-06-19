@@ -1,3 +1,4 @@
+local vim = vim
 
 require("neo-tree").setup({
     close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
@@ -5,7 +6,7 @@ require("neo-tree").setup({
     enable_git_status = false,
     window = {
         position = "left",
-        width = 25,
+        width = 30,
     },
     filesystem = {
         filtered_items = {
@@ -20,4 +21,9 @@ require("neo-tree").setup({
 
 vim.keymap.set('n', '<leader>tt', ':Neotree toggle<cr>')
 vim.keymap.set('n', '<leader>ff', ':Neotree reveal<cr>')
+
+vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeNormal" })
+vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeNormalNC" })
+vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeWinSeparator" })
+-- vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NormalFloat" })
 

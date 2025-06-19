@@ -1,3 +1,4 @@
+local vim = vim
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -14,33 +15,58 @@ vim.opt.rtp:prepend(lazypath)
 
 
 return require('lazy').setup({
-    { 'catppuccin/nvim', name = 'catppuccin' },
-
-    { 'xiyaowong/transparent.nvim' },
+    {
+        'catppuccin/nvim',
+        name = 'catppuccin',
+        lazy = false,
+        priority = 1000,
+        config = function() vim.cmd([[colorscheme catppuccin-mocha]]) end,
+    },
+    { 'Mofiqul/vscode.nvim', name = 'vscode', lazy = true },
 
     { 'nvim-lua/plenary.nvim' },
-    { 'nvim-tree/nvim-web-devicons' },
+    { 'nvim-tree/nvim-web-devicons', lazy = true },
 
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
-    { 'neovim/nvim-lspconfig' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/nvim-cmp' },
+    { 'mason-org/mason.nvim', opts = {}, lazy = true },
+    {
+        'mason-org/mason-lspconfig.nvim',
+        opts = {},
+        dependencies = {
+            { 'mason-org/mason.nvim', opts = {} },
+            'neovim/nvim-lspconfig',
+        },
+    },
     { 'L3MON4D3/LuaSnip' },
     { 'mfussenegger/nvim-jdtls' },
-
-    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', },
-    { 'theprimeagen/harpoon' },
     {
-        'nvim-neo-tree/neo-tree.nvim',
-        branch = 'v3.x',
-        dependencies = { 'MunifTanjim/nui.nvim', }
+        'hrsh7th/nvim-cmp',
+        event = "InsertEnter",
+        dependencies = { 'hrsh7th/cmp-nvim-lsp' },
     },
 
+    {
+        'nvim-telescope/telescope.nvim',
+        branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+        },
+        lazy = false,
+    },
+    { 'theprimeagen/harpoon' },
+
+    { 'xiyaowong/transparent.nvim', lazy=false },
     { 'nvim-lualine/lualine.nvim' },
     { 'kdheepak/tabline.nvim' },
     { 'lukas-reineke/indent-blankline.nvim' },
+
+    ui = { border = "╭─╮│╯─╰│", }
 })
 
