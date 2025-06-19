@@ -20,6 +20,7 @@ vim.opt.foldenable = false
 vim.opt.list = true
 vim.cmd("set foldtext=")
 vim.diagnostic.config({ virtual_text = true })
+vim.lsp.set_log_level("OFF")
 
 vim.g.zig_fmt_autosave = 0
 

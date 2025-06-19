@@ -67,7 +67,7 @@ return require('lazy').setup({
     { 'xiyaowong/transparent.nvim' },
     { 'nvim-lualine/lualine.nvim' },
     { 'kdheepak/tabline.nvim' },
-    { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = { indent = { char = "▏" } } },
+    { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = { scope = { enabled = false }, indent = { char = "▏" } } },
 
     },
 
