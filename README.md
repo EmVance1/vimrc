@@ -1,12 +1,12 @@
 # PapaFrancesco vimrc
 
-A backup/repo of my custom NeoVim config
+A backup/repo of my custom nvim config
 
 ![screenshot](res/screenshot.png)
 
 ## Plugins
 
-### Colorscheme
+### Colors
 - [catpuccin](https://github.com/catppuccin/nvim)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
@@ -28,5 +28,4 @@ A backup/repo of my custom NeoVim config
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [tabline](https://github.com/kdheepak/tabline.nvim)
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [noice](https://github.com/folke/noice.nvim)
 

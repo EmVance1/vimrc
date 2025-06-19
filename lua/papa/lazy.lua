@@ -20,7 +20,6 @@ return require('lazy').setup({
     {
         'catppuccin/nvim',
         name = 'catppuccin',
-        lazy = false,
         priority = 1000,
         config = function() vim.cmd([[colorscheme catppuccin-mocha]]) end,
     },
@@ -38,12 +37,14 @@ return require('lazy').setup({
             'neovim/nvim-lspconfig',
         },
     },
-    { 'L3MON4D3/LuaSnip' },
-    { 'mfussenegger/nvim-jdtls' },
+    { 'mfussenegger/nvim-jdtls', lazy = true },
     {
         'hrsh7th/nvim-cmp',
         event = "InsertEnter",
-        dependencies = { 'hrsh7th/cmp-nvim-lsp' },
+        dependencies = {
+            'L3MON4D3/LuaSnip',
+            'hrsh7th/cmp-nvim-lsp'
+        },
     },
 
     {
@@ -60,11 +61,10 @@ return require('lazy').setup({
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
         },
-        lazy = false,
     },
-    { 'theprimeagen/harpoon' },
+    { 'theprimeagen/harpoon', lazy = true },
 
-    { 'xiyaowong/transparent.nvim', lazy=false },
+    { 'xiyaowong/transparent.nvim' },
     { 'nvim-lualine/lualine.nvim' },
     { 'kdheepak/tabline.nvim' },
     { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = { indent = { char = "▏" } } },
