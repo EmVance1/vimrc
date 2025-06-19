@@ -25,5 +25,5 @@ vim.keymap.set('n', '<leader>ff', ':Neotree reveal<cr>')
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeNormal" })
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeNormalNC" })
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeWinSeparator" })
--- vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NormalFloat" })
+vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NormalFloat" })
 

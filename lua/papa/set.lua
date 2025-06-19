@@ -17,6 +17,7 @@ vim.opt.colorcolumn = "135"
 vim.opt.fillchars = {eob = " "}
 vim.opt.signcolumn = "yes"
 vim.opt.foldenable = false
+vim.opt.list = true
 vim.cmd("set foldtext=")
 vim.diagnostic.config({ virtual_text = true })
 

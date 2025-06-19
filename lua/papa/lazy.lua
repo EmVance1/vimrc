@@ -15,6 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 
 
 return require('lazy').setup({
+    spec = {
+
     {
         'catppuccin/nvim',
         name = 'catppuccin',
@@ -24,7 +26,6 @@ return require('lazy').setup({
     },
     { 'Mofiqul/vscode.nvim', name = 'vscode', lazy = true },
 
-    { 'nvim-lua/plenary.nvim' },
     { 'nvim-tree/nvim-web-devicons', lazy = true },
 
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -48,7 +49,8 @@ return require('lazy').setup({
     {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        lazy = true,
     },
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -65,8 +67,10 @@ return require('lazy').setup({
     { 'xiyaowong/transparent.nvim', lazy=false },
     { 'nvim-lualine/lualine.nvim' },
     { 'kdheepak/tabline.nvim' },
-    { 'lukas-reineke/indent-blankline.nvim' },
+    { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = { indent = { char = "▏" } } },
 
-    ui = { border = "╭─╮│╯─╰│", }
+    },
+
+    ui = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } }
 })
 
