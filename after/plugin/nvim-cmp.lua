@@ -17,11 +17,11 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
     }),
     sources = {
+        -- {name = 'nvim_lua'},
         {name = 'path'},
         {name = 'nvim_lsp'},
-        {name = 'nvim_lua'},
-        {name = 'luasnip', keyword_length = 2},
-        {name = 'buffer', keyword_length = 3},
+        {name = 'luasnip'}, --keyword_length = 2},
+        -- {name = 'buffer'}, --keyword_length = 3},
     },
 })
 

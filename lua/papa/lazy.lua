@@ -25,6 +25,7 @@ return require('lazy').setup({
     },
     { 'Mofiqul/vscode.nvim', name = 'vscode', lazy = true },
 
+    { 'nvim-lua/plenary.nvim' },
     { 'nvim-tree/nvim-web-devicons', lazy = true },
 
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -37,15 +38,19 @@ return require('lazy').setup({
             'neovim/nvim-lspconfig',
         },
     },
-    { 'mfussenegger/nvim-jdtls', lazy = true },
     {
         'hrsh7th/nvim-cmp',
-        event = "InsertEnter",
+        -- event = "InsertEnter",
         dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
             'L3MON4D3/LuaSnip',
-            'hrsh7th/cmp-nvim-lsp'
+            'saadparwaiz1/cmp_luasnip',
         },
     },
+    { 'mfussenegger/nvim-jdtls' },
 
     {
         'nvim-telescope/telescope.nvim',
