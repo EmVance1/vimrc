@@ -1,5 +1,3 @@
-local vim = vim
-
 
 require('nvim-treesitter.configs').setup({
     ensure_installed = { "vim", "vimdoc", "query", "c", "javascript", "typescript", "lua", "rust", "python", "java", "ebnf", "verilog" },

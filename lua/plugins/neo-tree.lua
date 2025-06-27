@@ -1,13 +1,9 @@
-local vim = vim
-
-
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeNormal" })
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeNormalNC" })
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NeoTreeWinSeparator" })
 vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "NormalFloat" })
 
 vim.keymap.set('n', '<leader>tt', ':Neotree toggle<cr>')
-vim.keymap.set('n', '<leader>ff', ':Neotree reveal<cr>')
 
 return {
     {
@@ -41,7 +37,7 @@ return {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        lazy = true,
+        event = "VeryLazy",
         config = function()
             local builtin = require('telescope.builtin')
             vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -50,7 +46,7 @@ return {
     },
     {
         'theprimeagen/harpoon',
-        lazy = true,
+        event = "VeryLazy",
         config = function()
             local mark = require("harpoon.mark")
             local ui = require("harpoon.ui")

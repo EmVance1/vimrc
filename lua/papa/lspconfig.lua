@@ -1,5 +1,3 @@
-
-
 vim.lsp.set_log_level("OFF")
 
 vim.lsp.config('lua_ls', {

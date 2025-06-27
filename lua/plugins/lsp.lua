@@ -4,10 +4,12 @@ return {
         event = { "BufReadPre", "BufNewFile" },
         config = function()
             vim.lsp.enable("clangd")
-            vim.lsp.enable("rust-analyzer")
+            vim.lsp.enable("rust_analyzer")
             vim.lsp.enable("pyright")
+            vim.lsp.enable("mypy")
             vim.lsp.enable("lua_ls")
             vim.lsp.enable("zls")
+            vim.lsp.enable("json-lsp")
         end
     },
     {
