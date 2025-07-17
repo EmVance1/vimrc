@@ -1,4 +1,4 @@
-# PapaFrancesco vimrc
+# Em Vance's Neovim Files
 
 A backup/repo of my custom nvim config
 
@@ -7,7 +7,7 @@ A backup/repo of my custom nvim config
 ## Plugins
 
 ### Colors
-- [catpuccin](https://github.com/catppuccin/nvim)
+- [catppuccin](https://github.com/catppuccin/nvim)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ### LSP

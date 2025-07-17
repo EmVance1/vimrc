@@ -11,7 +11,7 @@ syn match   Number     /[0-9]\+/    contained
 syn match   String     /"\([^\\"]\?\(\\[\\"tn]\)\?\)*"/
 
 syn keyword Modifier   Add Sub Set
-syn keyword SpecialV   entry exit
+syn keyword SpecialV   entry exit exit_into
 
 hi def link Condition  Macro
 hi def link Number     Constant
